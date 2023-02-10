@@ -1,0 +1,1 @@
+start "" "D:\python\100days\venv\Scripts\pythonw.exe" "main.py"
