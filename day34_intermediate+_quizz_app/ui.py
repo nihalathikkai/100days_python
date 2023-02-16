@@ -77,6 +77,8 @@ class QuizInterface:
         if self.quiz_master.next_question():
             self.quiz_card.itemconfig(self.question, text=self.quiz_master.get_question())
         else:
-            self.button_true.config(command=lambda: None)
-            self.button_false.config(command=lambda: None)
+            # self.button_true.config(command=lambda: None)
+            # self.button_false.config(command=lambda: None)
+            self.button_true.config(state="disabled")
+            self.button_false.config(state="disabled")
             self.quiz_card.itemconfig(self.question, text=f"You got \n{self.quiz_master.score} out of 10 \nanswers correct.")
