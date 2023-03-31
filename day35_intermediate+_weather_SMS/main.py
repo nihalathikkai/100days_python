@@ -1,8 +1,6 @@
 import requests
 import smtplib
-
-API_KEY = "8d0343ef87b7ae3d758349ef5cea38f9"
-
+from env import API_KEY
 
 def send_mail():
     email = "mfreeman287p@gmail.com"
