@@ -12,7 +12,7 @@ QUOTES = "D:/python/100days/day32_intermediate_emailer/quotes.txt"
 def send_mail(to_address, message):
     my_email = "mfreeman287p@gmail.com"
     password = "rsbhslpmkjcktwyn"
-    with smtplib.SMTP("smtp.gmail.com") as connection:
+    with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()
         connection.login(user=my_email, password=password)
         connection.sendmail(from_addr=my_email, to_addrs=to_address, msg=message)
