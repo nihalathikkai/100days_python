@@ -7,7 +7,7 @@ import csv
 #yahoo = "mfreeman287p@yahoo.com"
 
 
-QUOTES = "D:/python/100days/day32_intermediate_emailer/quotes.txt"
+QUOTES = "D:/python/100days/day32_intermediate+_emailer/quotes.txt"
 
 def send_mail(to_address, message):
     my_email = "mfreeman287p@gmail.com"
@@ -50,8 +50,8 @@ def monday_motivation():
 # 4. Send the letter generated in step 3 to that person's email address.
 # HINT: Gmail(smtp.gmail.com), Yahoo(smtp.mail.yahoo.com), Hotmail(smtp.live.com), Outlook(smtp-mail.outlook.com)
 
-BIRTHDAYS_DATA = "D:/python/100days/day32_intermediate_emailer/birthdays.csv"
-LETTER_TEMPLATES = "D:/python/100days/day32_intermediate_emailer/letter_templates"
+BIRTHDAYS_DATA = "D:/python/100days/day32_intermediate+_emailer/birthdays.csv"
+LETTER_TEMPLATES = "D:/python/100days/day32_intermediate+_emailer/letter_templates"
 
 def get_template():
     with open(f"{LETTER_TEMPLATES}/letter_{randint(1,3)}.txt") as file:

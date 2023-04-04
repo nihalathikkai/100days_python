@@ -32,7 +32,7 @@ for destination in sheet_data:
     iata_code = destination["iataCode"]
     flight_data = flight_search.search_flicht_cost("LON", iata_code)
     # print(f"{city} : {flight_data.price}; {destination['lowestPrice']}")
-    if flight_data.price <= destination["lowestPrice"]:
+    if flight_data and flight_data.price <= destination["lowestPrice"]:
         message = f"Subject:Flight Deal Alert ({flight_data.cityFrom}-{flight_data.cityTo})!!!\n\nOnly {flight_data.price} GBP to fly from {flight_data.cityFrom}-{flight_data.flyFrom} to {flight_data.cityTo}-{flight_data.flyTo}, from {flight_data.local_arrival} to {flight_data.local_departure}"
         
         send_mail(to_address="mfreeman287p@gmail.com", message=message)

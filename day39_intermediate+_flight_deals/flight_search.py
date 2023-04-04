@@ -53,19 +53,25 @@ class FlightSearch:
         response.raise_for_status()
         result = response.json()
         # print(result)
-        data = result["data"][0]
-        flight_data = FlightData(
-            price = data["price"],
-            flyFrom = data["flyFrom"],
-            flyTo = data["flyTo"], 
-            cityFrom = data["cityFrom"], 
-            cityTo = data["cityTo"], 
-            local_arrival = data["local_arrival"].split('T')[0], 
-            local_departure = data["local_departure"].split('T')[0]
-        )
-        return flight_data
+        try:
+            data = result["data"][0]
+            print(f"{fly_to} {data['price']}.")
+        except:
+            print(f"No flights found for {fly_to}.")
+            return None
+        else:
+            flight_data = FlightData(
+                price = data["price"],
+                flyFrom = data["flyFrom"],
+                flyTo = data["flyTo"], 
+                cityFrom = data["cityFrom"], 
+                cityTo = data["cityTo"], 
+                local_arrival = data["local_arrival"].split('T')[0], 
+                local_departure = data["local_departure"].split('T')[0]
+            )
+            return flight_data
         
 
 # f = FlightSearch()
 # print(f.search_iata_code("Paris"))
-# print(f.search_flicht_cost("LON", "PAR"))
+# print(f.search_flicht_cost("LON", "DPS"))
