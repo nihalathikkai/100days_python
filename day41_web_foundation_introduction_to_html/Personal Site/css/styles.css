@@ -1,0 +1,26 @@
+/* CSS SYNTAX
+selector { 
+    property1: value;
+    property2: value;
+}
+*/
+
+body {
+  background-color: #eaf6f6;
+}
+
+hr {
+  border-color: grey;
+  border-style: dotted none none;
+  border-width: 10px;
+  width: 5%;
+}
+
+h1 {
+  color: #66bfbf;
+}
+
+h3 {
+  color: #66bfbf;
+  font-style: italic;
+}

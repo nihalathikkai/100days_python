@@ -1,0 +1,37 @@
+h1 {
+  color: red;
+  font-size: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img:hover {
+  background-color: lightcyan;
+}
+
+.heading {
+  color: darkgreen;
+}
+
+.bacon {
+  background-color: lightgreen;
+}
+
+.broccoli {
+  background-color: indianred;
+}
+
+.circular {
+  border-radius: 50%;
+}
+
+.bacon:hover {
+  border-radius: 20%;
+}
+
+/* #heading {
+  color: lightsalmon;
+} */
+
+h1:hover {
+  color: goldenrod;
+}
